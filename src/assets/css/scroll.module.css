@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  .modal {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    background-color: white;
+    padding: 1rem;
+    text-align: center;
+    width: 40%;
+    z-index: 10;
+    position: fixed;
+    top: 10vh;
+    left: calc(50% - 15rem);
+    z-index: 3000;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+  }
+  .modalActionBtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .ModalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .iconCont > span {
+    color: #000;
+    margin-left: 12px;
+    font-weight: 600;
+    font-size: 17px;
+    text-align: center;
+  }
+  .ModalBtn {
+    background-color: transparent;
+    border:none;
+  }
+  .ActBtn {
+    padding: 7px 20px;
+    border: none;
+    background-color: #00abb3;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.2s ease-in-out 0s;
+  }
+  .CanBtn {
+    padding: 7px 20px;
+    margin-left: 10px;
+    border: 0.5px solid #bbb;
+    background-color: #ededed;
+    border-radius: 3px;
+    color: #393939;
+    font-weight: 600;
+    transition: 0.2s ease-in-out 0s;
+    margin-right: 10px;
+  }
+  .ModalBtnCont {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px 0;
+  }
+  .ActBtn:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+    background: #01bfc9;
+  }
+  
+  .CanBtn:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+  }
+  .modalContent {
+    max-height: 75vh; /* Set a maximum height for the scrollable area */
+    overflow: auto; /* Enable scrolling for overflow content */
+    /* border:2px solid #7c2929; */
+    margin:4px 0;
+  }
+  
+  .scrollableContent {
+    padding: 1rem; /* Add padding to the scrollable content */
+  }

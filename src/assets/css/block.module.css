@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+.tableButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid red; */
+    margin: 25px 0;
+    /* padding: 10px 0; */
+}
+.tableButton2 {
+    display: flex;
+    align-items: center;
+}
+.searchInput {
+    /* border: 1px solid #ddd; */
+    display: flex;
+    align-items: center;
+}
+.input {
+    /* border:none; */
+    /* padding-left: 7px; */
+}
+input {
+    border:none;
+}
+.buttonsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:5px;
+}
+.buttonsContainer2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:10px;
+    /* border: 2px solid green; */
+}
+.locationBtn {
+    border: none;
+    background-color: #00abb3;
+    padding: 9px 20px;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.2s ease-in-out 0s;
+    margin-right: 10px;
+}
+.exportBtn {
+    border: none;
+    background-color: #fefefe;
+    padding: 9px 12px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    color: #000;
+    font-weight: 600;
+    transition: 0.2s ease-in-out 0s;
+    margin-right: 10px;
+    box-shadow: 1px 1px 1px #ccc;
+}
+.locationBtn:hover {
+    cursor: pointer;
+  transform: scale(1.03);
+  background: #01bfc9;
+}
+.tableContainer {
+    padding: 10px 0;
+}
+.tableContainer2{
+    padding: 20px;
+}
+.tableInfo {
+    font-size: 15px;
+    color: #171717;
+}
+.Header {
+    border: none;
+    background-color: #ededed;
+    width: fit-content;
+}
+.TableBody {
+    border-top: 3px solid #c4c4c4;
+    /* border-bottom: 1px solid #171717; */
+}
+.HeaderText {
+    font-size: 12px;
+    font-weight: 600;
+    color: #171717;
+    text-transform: uppercase;
+}
+.tableFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+    /* border: 2px solid red; */
+}
+.tableAction {
+    border: none;
+    background: transparent;
+}
+
+/* structure style  */
+.strucCont {
+    width: 100%;
+    border-radius: 10px;
+    box-sizing: 0 0 1px #ddd;
+  }
+.status {
+    background-color: rgb(209, 250, 229);
+    border-radius: 100px;
+    width: 100px;
+    color: rgb(28, 28, 28) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.statusText {
+    margin-left: 5px;
+    text-align: center;
+    font-size: 14px;
+}
+.icon {
+    margin-right: 25px;
+    width: 8px;
+    height: 8px;
+    border: 4px solid red;
+}
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    background-color:rgb(34, 196, 94) ;
+} 
+.box{
+    width: 15px;
+    height: 15px;
+    justify-self: center;
+}
+.entityCell {
+    white-space: pre-wrap;
+    overflow-wrap: anywher;
+    word-wrap: break-word;
+    word-break: break-all;
+    width: 250px; /* Adjust the min-width as needed */
+    border: 2px solid green;
+}
+.bodycont {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+.check {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.actBtn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.tableContain {
+    width: 100%;
+    padding: 30px 0;
+}
+.ActionBtn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.ActBtn {
+    padding: 7px 20px;
+    border: none;
+    background-color: #00abb3;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.2s ease-in-out 0s;
+}

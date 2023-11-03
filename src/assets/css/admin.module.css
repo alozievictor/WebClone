@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.BtnCont {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.dropdown {
+  position: relative;
+  border: none;
+}
+
+.menu {
+  position: absolute;
+  list-style-type: none;
+  margin: 5px 0;
+  padding: 10px 5px;
+  border-radius: 10px;
+  width: 185px;
+  box-shadow: 2px 3px 5px #ccc;
+  z-index: 100;
+}
+
+.Btn {
+  background-color: #00abb3;
+  padding: 9px 25px;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.2s ease-in-out 0s;
+}
+
+.ActionBtn {
+  background-color: #00abb3;
+  padding: 7px 12px;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.2s ease-in-out 0s;
+}
+
+.Btn:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  background: #01bfc9;
+}
+
+.ActionBtn:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  background: #01bfc9;
+}
+
+.menu > li {
+  margin: 0;
+  background-color: white;
+  font-size: 15px;
+}
+
+.menu > li:hover {
+  background-color: rgb(233, 233, 233);
+}
+
+.menu > li > button {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 5px;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.AdminCard {
+    width: 40%;
+    padding: 20px;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 2px 2px 4px #e0e0e0;
+}
+
+.innerCard {
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.Img {
+    width:120px;
+    height:120px;
+    border-radius: 200px;
+}
+.ImgCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px;
+}
+.cardDetails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px;
+}
+.cardContent {
+    text-align: center;
+}
+.innerBtn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+/* modal styles  */
+
+.card {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  width: 20rem;
+}
+
+.actions {
+  text-align: right;
+}
+
+.modal {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+  width: 50%;
+  z-index: 10;
+  position: fixed;
+  top: 10vh;
+  left: calc(43% - 15rem);
+  z-index: 3000;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal2 {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+  width: 30%;
+  z-index: 10;
+  position: fixed;
+  top: 20vh;
+  left: calc(50% - 15rem);
+  z-index: 3000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backdrop {
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
+
+
+/* isExisting modal  */
+
+.ModalBtn {
+  background-color: transparent;
+  border:none;
+}
+
+.ModalBtnCont {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px 0;
+}
+.ModalBtnCont2 {
+  align-self: center;
+  padding: 15px 100px;
+  /* border: 2px solid red; */
+}
+
+.iconCont > span {
+  color: #000;
+  margin-left: 12px;
+  font-weight: 600;
+  font-size: 17px;
+  text-align: center;
+}
+.modalActionBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ModalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ActBtn {
+  padding: 7px 20px;
+  border: none;
+  background-color: #00abb3;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.2s ease-in-out 0s;
+}
+.CanBtn {
+  padding: 7px 20px;
+  margin-left: 10px;
+  border: 0.5px solid #bbb;
+  background-color: #ededed;
+  border-radius: 3px;
+  color: #393939;
+  font-weight: 600;
+  transition: 0.2s ease-in-out 0s;
+  margin-right: 10px;
+}
+
+.ActBtn:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+  background: #01bfc9;
+}
+
+.CanBtn:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
+
+/* form  */
+
+
+ 
+
+
