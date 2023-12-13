@@ -1,19 +1,21 @@
 import React from "react";
-import style from "../assets/css/login.module.css"
+import style from "../assets/css/login.module.css";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
-  const { useState } = React;
-  const [input, setinput] = useState({
+  const navigate = useNavigate()
+
+  const [input, setinput] = React.useState({
     email: "",
     password: "",
   });
-  const [wemail, setwemail] = useState(false);
-  const [wpass, setwpass] = useState(false);
-  const [danger, setdanger] = useState(true);
+  const [wemail, setwemail] = React.useState(false);
+  const [wpass, setwpass] = React.useState(false);
+  const [danger, setdanger] = React.useState(true);
 
-  const [eye, seteye] = useState(true);
-  const [pass, setpass] = useState("password");
-  const [changeeye, setchangeeye] = useState(false);
+  const [eye, seteye] = React.useState(true);
+  const [pass, setpass] = React.useState("password");
+  const [changeeye, setchangeeye] = React.useState(false);
 
   const inputEvent = (event) => {
     const name = event.target.name;
@@ -34,16 +36,18 @@ function Login() {
     if (input.email.length < 1) {
       setdanger(false);
     }
-    if (input.email == "") {
+    if (input.email === "") {
       setwemail(true);
-    } else if (input.password == "") {
+    } else if (input.password === "") {
       setwpass(true);
     } else {
       alert("Loged in Successfully");
+      console.log(input)
+      navigate('/auth/')
     }
   };
   const Eye = () => {
-    if (pass == "password") {
+    if (pass === "password") {
       setpass("text");
       seteye(false);
       setchangeeye(true);
@@ -58,21 +62,25 @@ function Login() {
     <div className={style.container}>
       <div className={style.card}>
         <div className={style.image}>
-          <img src="https://imgur.com/jgKj19A.png" />
+          <img src="https://imgur.com/jgKj19A.png" alt="" />
           <h2>Sign in to Veritex</h2>
-          <p className={style.headerText}>An automate staff management system for all business type </p>
+          <p className={style.headerText}>
+            An automate staff management system for all business type{" "}
+          </p>
         </div>
         <form onSubmit={submitForm}>
           <div className={style.input}>
             <span className={style.inputspan}>E-mail</span>
-            <input
-              className={` ${wemail ? "warning" : ""}`}
-              type="text"
-              name="email"
-              value={input.email}
-              onChange={inputEvent}
-              placeholder="Company@email.com"
-            />
+            <div>
+              <input
+                className={` ${wemail ? "warning" : ""}`}
+                type="text"
+                name="email"
+                value={input.email}
+                onChange={inputEvent}
+                placeholder="Company@email.com"
+              />
+            </div>
             <p className={` ${danger ? "d-none" : ""}`}>
               <i className="fa fa-exclamation-circle"></i>Invalid Email Address
             </p>
@@ -83,7 +91,6 @@ function Login() {
             <div className={style.inputDev}>
               <input
                 className={` ${wpass ? "warning" : ""}`}
-                
                 type={pass}
                 name="password"
                 value={input.password}
@@ -96,18 +103,16 @@ function Login() {
                   className={`fa ${eye ? "fa-eye-slash" : "fa-eye"}`}
                 ></i>
               </div>
-              <p className={` ${danger ? "d-none" : ""}`}>
+            </div>
+            <p className={` ${danger ? "d-none" : ""}`}>
               <i className="fa fa-exclamation-circle"></i>Invalid Email Address
             </p>
-            </div>
           </div>
-          <div className={style.dont }>
-            <a href="#">Forgot Password?</a>
+          <div className={style.dont}>
+            <a href="#1">Forgot Password?</a>
           </div>
           <div className={style.button}>
-            <button type="submit">
-              Submit
-            </button>
+            <button type="submit">Submit</button>
           </div>
         </form>
       </div>
