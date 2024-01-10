@@ -46,6 +46,7 @@ const Index = (props) => {
   if (window.Chart) {
     parseOptions(Chart, chartOptions());
   }
+  console.log(chartExample1.options);
 
   const toggleNavs = (e, index) => {
     e.preventDefault();

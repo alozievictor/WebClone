@@ -23,6 +23,15 @@ import Expenditure from "views/examples/Expenditure";
 import Approval from "views/examples/Approval";
 import Request from "views/examples/Request";
 import Reports from "views/examples/Reports";
+import HeadCountReport from "components/Reports/HeadCountReport";
+import MonthStatutoryReport from "components/Reports/MonthStatutoryReport";
+import SalaryReport from "components/Reports/SalaryReport";
+import ExpenditureReport from "components/Reports/ExpenditureReport";
+import VariationReport from "components/Reports/VariationReport";
+import DeductionReport from "components/Reports/DeductionReport";
+import PerformanceReport from "components/Reports/PerformanceReport";
+import BoardingReport from "components/Reports/BoardingReport";
+import AttendanceReport from "components/Reports/AttendanceReport";
 
 
 var routes = [
@@ -81,6 +90,60 @@ var routes = [
     icon: "ni ni-bullet-list-67",
     component: <Reports />,
     layout: "/admin",
+  },
+  {
+    path: "/head_count",
+    name: "Reports",
+    component: <HeadCountReport />,
+    layout: "/report",
+  },
+  {
+    path: "/month_report",
+    name: "Reports",
+    component: <MonthStatutoryReport />,
+    layout: "/report",
+  },
+  {
+    path: "/salary_report",
+    name: "Reports",
+    component: <SalaryReport />,
+    layout: "/report",
+  },
+  {
+    path: "/expenditure_report",
+    name: "Reports",
+    component: <ExpenditureReport />,
+    layout: "/report",
+  },
+  {
+    path: "/variation_report",
+    name: "Reports",
+    component: <VariationReport />,
+    layout: "/report",
+  },
+  {
+    path: "/deduction_report",
+    name: "Reports",
+    component: <DeductionReport />,
+    layout: "/report",
+  },
+  {
+    path: "/performance_report",
+    name: "Reports",
+    component: <PerformanceReport />,
+    layout: "/report",
+  },
+  {
+    path: "/boarding_report",
+    name: "Reports",
+    component: <BoardingReport />,
+    layout: "/report",
+  },
+  {
+    path: "/attendance_report",
+    name: "Reports",
+    component: <AttendanceReport />,
+    layout: "/report",
   },
 ];
 export default routes;
