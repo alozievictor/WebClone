@@ -1,7 +1,7 @@
 import style from "../../assets/css/admin.module.css";
-import React, { useEffect } from "react";
+import React from "react";
 
-const StepsModal = (props) => {
+const SalaryStructureModal = (props) => {
   const closeHandler = () => {
     props.onCancel();
   };
@@ -30,9 +30,9 @@ const StepsModal = (props) => {
                 d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
               />
             </svg>
-            <span>Edit Salary Step</span>
+            <span>Add Salary Structure</span>
           </div>
-          <button className={style.ModalBtn}>
+          <button className={style.ModalBtn} onClick={closeHandler}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
@@ -48,23 +48,16 @@ const StepsModal = (props) => {
         <div className="my-1">
           <form className="container mt-4">
             <div className="row">
-              <div className={"form-group col-md-12"}>
+              <div className={"form-group col"}>
                 <label htmlFor="town" className="float-left text-dark">
-                  Salary Step <b className="text-danger">*</b>
+                  Salary Structure <b className="text-danger">*</b>
                 </label>
-                <select
-                  className="form-control valid form-select"
-                  required
-                  id="town"
-                  aria-invalid="false"
-                >
-                  <option value="">Please Select</option>
-                  <option value="ABUJA FCT">1</option>
-                  <option value="ABIA">2</option>
-                  <option value="ADAMAWA">3</option>
-                  <option value="AKWA IBOM">4</option>
-                  <option value="ANAMBRA">5</option>
-                </select>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="structure"
+                  placeholder=""
+                />
                 <span
                   className="spanValid field-validation-valid"
                   data-valmsg-for="town"
@@ -73,12 +66,35 @@ const StepsModal = (props) => {
               </div>
             </div>
 
+            <div className="row">
+              <div className={"form-group col"}>
+                <label htmlFor="module" className="float-left text-dark">
+                  Has Steps? <b className="text-danger">*</b>
+                </label>
+                <select
+                  className="form-control valid form-select"
+                  required
+                  id="module"
+                  aria-invalid="false"
+                >
+                  <option value="">Please Select</option>
+                  <option value="ANAMBRA">Yes</option>
+                  <option value="BAUCHI">No</option>
+                </select>
+                <span
+                  className="spanValid field-validation-valid"
+                  data-valmsg-for="module"
+                  data-valmsg-replace="true"
+                ></span>
+              </div>
+            </div>
+
             <div className={style.ModalBtnCont}>
               <div className={style.modalActionBtn}>
-                <button className={style.ActBtn} onClick={closeHandler}>
+                <button className={style.ActBtn} onClick={ConfirmHandler}>
                   Create
                 </button>
-                <button className={style.CanBtn} onClick={ConfirmHandler}>
+                <button className={style.CanBtn} onClick={closeHandler}>
                   Cancel
                 </button>
               </div>
@@ -90,4 +106,4 @@ const StepsModal = (props) => {
   );
 };
 
-export default StepsModal;
+export default SalaryStructureModal;

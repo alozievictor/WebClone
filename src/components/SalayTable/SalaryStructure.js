@@ -1,6 +1,7 @@
 import React from 'react';
 import style from "../../assets/css/block.module.css";
-import BranchModal from "components/subComponent/BranchModal";
+// import BranchModal from "components/subComponent/BranchModal";
+import SalaryStructureModal from 'components/subComponent/SalaryStructureModal';
 import Backdrop from "components/subComponent/Backdrop";
 // import style from "../../assets/css/salary.module.css"
 
@@ -49,7 +50,7 @@ function SalaryStructure() {
                   <div class={style.buttonsContainer} data-v-17b4fe89="">
                     <button onClick={HandleLocation} className={style.locationBtn} data-v-17b4fe89="">
                       {" "}
-                      + Add Location{" "}
+                      + Add Salary Structure{" "}
                     </button>
                     <div
                       class="csv d-none d-md-block d-lg-block"
@@ -399,7 +400,7 @@ function SalaryStructure() {
               </div>
               <div>
             {isLocation && (
-              <BranchModal onCancel={closehandler} onConfirm={closehandler} />
+              <SalaryStructureModal onCancel={closehandler} onConfirm={closehandler} />
             )}
             {isLocation && <Backdrop onClick={closehandler} />}
           </div>

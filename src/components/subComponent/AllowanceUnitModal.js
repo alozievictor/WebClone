@@ -1,5 +1,5 @@
 import style from "../../assets/css/admin.module.css";
-import React, { useEffect } from "react";
+import React from "react";
 
 function AllowanceUnitModal(props) {
   const closeHandler = () => {

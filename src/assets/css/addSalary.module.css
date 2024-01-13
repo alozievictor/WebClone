@@ -1,28 +1,44 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 .container {
- display: flex;
- justify-content: center;
- align-items: center;
+  width: 90%;
+  overflow-x: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .content {
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
-    background-color: white;
-    padding: 1rem;
-    /* text-align: center; */
-    width: 80%;
-    margin: 100px 20px;
-    z-index: 10;
-    position: fixed;
-    top: 10px;
-    left: calc(25% - 15rem);
-    z-index: 3000;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  background-color: white;
+  padding: 1rem;
+  /* text-align: center; */
+  width: 80%;
+  margin: 100px 20px;
+  z-index: 10;
+  position: fixed;
+  top: 10px;
+  left: calc(25% - 15rem);
+  z-index: 3000;
 }
 .formCont {
-    padding: 0 10px;
+  padding: 0 10px;
 }
+.th {
+    border: 1px solid rgb(145, 41, 41);
+    width: 30%;
+    /* padding: 0 100px; */
+}
+.td {
+    border: 1px solid gray;
+    padding: 0 100px;
+}
+
+.scrollContainer {
+    overflow-x: auto;
+    width: 100%; /* Set the width according to your design */
+  }

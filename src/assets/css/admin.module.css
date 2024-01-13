@@ -9,6 +9,8 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin-top: 10px;
+  padding-top: 10%;
 }
 
 .dropdown {
@@ -21,10 +23,12 @@
   list-style-type: none;
   margin: 5px 0;
   padding: 10px 5px;
-  border-radius: 10px;
+  /* border: 1px solid gray; */
+  border-radius: 5px;
   width: 185px;
   box-shadow: 2px 3px 5px #ccc;
   z-index: 100;
+  background: #fff;
 }
 
 .Btn {
@@ -83,44 +87,48 @@
 }
 
 .AdminCard {
-    width: 40%;
-    padding: 20px;
-    border-radius: 5px;
-    background: white;
-    box-shadow: 2px 2px 4px #e0e0e0;
+  width: 35%;
+  padding: 20px;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 2px 2px 4px #e0e0e0;
 }
 
 .innerCard {
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.innerCont {
+  display:block;
+  justify-content: center;
+  align-items: center;
 }
 .Img {
-    width:120px;
-    height:120px;
-    border-radius: 200px;
+  width: 150px;
+  height: 150px;
+  border-radius: 200px;
 }
 .ImgCont {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 13px;
 }
 .cardDetails {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px;
 }
 .cardContent {
-    text-align: center;
+  text-align: center;
 }
 .innerBtn {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-
 
 /* modal styles  */
 
@@ -181,12 +189,11 @@
   z-index: 2000;
 }
 
-
 /* isExisting modal  */
 
 .ModalBtn {
   background-color: transparent;
-  border:none;
+  border: none;
 }
 
 .ModalBtnCont {
@@ -251,8 +258,3 @@
 }
 
 /* form  */
-
-
- 
-
-

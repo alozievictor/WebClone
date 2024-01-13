@@ -48,7 +48,7 @@ function BasicSalary() {
               <div class={style.buttonsContainer} data-v-17b4fe89="">
                 <button onClick={HandleLocation} className={style.locationBtn} data-v-17b4fe89="">
                   {" "}
-                  + Add Location{" "}
+                  + Add Basic Salary{" "}
                 </button>
                 <div
                   class="csv d-none d-md-block d-lg-block"
