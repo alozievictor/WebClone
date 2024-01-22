@@ -1,23 +1,3 @@
-/*!
-
-=========================================================
-* Argon Dashboard React - v1.2.3
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-// reactstrap components
-import { Container } from "reactstrap";
-// core components
 import React from "react";
 import Header from "components/Headers/Header.js";
 import style from "../../assets/css/admin.module.css";
@@ -68,8 +48,12 @@ const Admin = () => {
     handleMenuTwo();
   };
 
-  const closehandler = () => {
+  const closeHandler = () => {
     setIsExist(false);
+    setIsNew(false);
+    setIsDelete(false);
+    setIsRole(false);
+    setIsBlock(false);
   };
 
   const handleOpen = () => {
@@ -102,12 +86,9 @@ const Admin = () => {
 
   return (
     <>
-      <Header />
-
       {/* Pagecontent */}
-
       <div className="container my-3 my-md-2">
-        <div className="Container">
+        <div className="Container ">
           <div className={style.BtnCont}>
             <div className={style.dropdown}>
               <button className={style.Btn} onClick={handleOpen}>
@@ -151,57 +132,63 @@ const Admin = () => {
                   ) : null}
                 </div>
               </div>
-              <div className={style.ImgCont}>
-                <img
-                  alt="HR image"
-                  className={style.Img}
-                  src={require("../../assets/img/theme/bootstrap.jpg")}
-                />
-              </div>
-              <div className={style.cardDetails}>
-                <div className={style.cardContent}>
-                  <h3 style={{ color: "#00abb3" }}>HR Admin</h3>
-                  <div>
-                    <h5 style={{ color: "#bbb" }}>
-                      Techvibes International Limited
-                    </h5>
-                    <h3 style={{ color: "#000" }}>Mr Jimmy</h3>
-                    <h5 style={{ color: "#bbb" }}>09012345678</h5>
-                    <h5 style={{ color: "#bbb" }}>SirJimmy456@gmail.com</h5>
+
+              <div className={style.innerCont}>
+                <div className={style.ImgCont}>
+                  <img
+                    alt="HR image"
+                    className={style.Img}
+                    src={require("../../assets/img/theme/bootstrap.jpg")}
+                  />
+                </div>
+                <div className={style.cardDetails}>
+                  <div className={style.cardContent}>
+                    <h3 style={{ color: "#00abb3" }}>HR Admin</h3>
+                    <div>
+                      <h5 style={{ color: "#606060" }}>
+                        Techvibes International Limited
+                      </h5>
+                      <h3 style={{ color: "#000" }}>Mr Jimmy</h3>
+                      <h5 style={{ color: "#606060" }}>09012345678</h5>
+                      <h5 style={{ color: "#606060" }}>
+                        SirJimmy456@gmail.com
+                      </h5>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
           <div>
             {isExist && (
-              <Modal onCancel={closehandler} onConfirm={closehandler} />
+              <Modal onCancel={closeHandler} onConfirm={closeHandler} />
             )}
-            {isExist && <Backdrop onClick={closehandler} />}
+            {isExist && <Backdrop onClick={closeHandler} />}
           </div>
           <div>
             {isNew && (
-              <NewModal onCancel={closehandler} onConfirm={closehandler} />
+              <NewModal onCancel={closeHandler} onConfirm={closeHandler} />
             )}
-            {isNew && <Backdrop onClick={closehandler} />}
+            {isNew && <Backdrop onClick={closeHandler} />}
           </div>
           <div>
             {isDelete && (
-              <DeleteModal onCancel={closehandler} onConfirm={closehandler} />
+              <DeleteModal onCancel={closeHandler} onConfirm={closeHandler} />
             )}
-            {isDelete && <Backdrop onClick={closehandler} />}
+            {isDelete && <Backdrop onClick={closeHandler} />}
           </div>
           <div>
             {isRole && (
-              <RoleModal onCancel={closehandler} onConfirm={closehandler} />
+              <RoleModal onCancel={closeHandler} onConfirm={closeHandler} />
             )}
-            {isRole && <Backdrop onClick={closehandler} />}
+            {isRole && <Backdrop onClick={closeHandler} />}
           </div>
           <div>
             {isBlock && (
-              <BlockModal onCancel={closehandler} onConfirm={closehandler} />
+              <BlockModal onCancel={closeHandler} onConfirm={closeHandler} />
             )}
-            {isBlock && <Backdrop onClick={closehandler} />}
+            {isBlock && <Backdrop onClick={closeHandler} />}
           </div>
         </div>
       </div>

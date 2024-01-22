@@ -57,8 +57,6 @@ const Index = (props) => {
     <>
       <Header />
 
-
-
       {/* Page content */}
       <Container className="mt--7" fluid>
         <Row>

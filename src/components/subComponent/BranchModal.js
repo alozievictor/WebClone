@@ -2,7 +2,6 @@ import style from "../../assets/css/admin.module.css";
 import React, { useEffect } from "react";
 
 const BranchModal = (props) => {
-
   const closeHandler = () => {
     props.onCancel();
   };
@@ -31,7 +30,7 @@ const BranchModal = (props) => {
                 d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
               />
             </svg>
-            <span>Create Admin</span>
+            <span>Add Location</span>
           </div>
           <button className={style.ModalBtn}>
             <svg
@@ -51,7 +50,7 @@ const BranchModal = (props) => {
             <div className="row">
               <div className={"form-group col-md-6"}>
                 <label htmlFor="town" className="float-left text-dark">
-                  Employee Name <b className="text-danger">*</b>
+                  Entity <b className="text-danger">*</b>
                 </label>
                 <select
                   className="form-control valid form-select"
@@ -87,29 +86,10 @@ const BranchModal = (props) => {
 
               <div className={"form-group col-md-6"}>
                 <label htmlFor="module" className="float-left text-dark">
-                  Module yeah <b className="text-danger">*</b>
+                  Location <b className="text-danger">*</b>
                 </label>
-                <select
-                  className="form-control valid form-select"
-                  required
-                  id="module"
-                  aria-invalid="false"
-                >
-                  <option value="">Please Select</option>
-                  <option value="ANAMBRA">ANAMBRA</option>
-                  <option value="BAUCHI">BAUCHI</option>
-                  <option value="BAYELSA">BAYELSA</option>
-                  <option value="BENUE">BENUE</option>
-                  <option value="BORNO">BORNO</option>
-                  <option value="CROSS RIVER">CROSS RIVER</option>
-                  <option value="DELTA">DELTA</option>
-                  <option value="EBONYI">EBONYI</option>
-                  <option value="EDO">EDO</option>
-                  <option value="EKITI">EKITI</option>
-                  <option value="ENUGU">ENUGU</option>
-                  <option value="GOMBE">GOMBE</option>
-                  <option value="IMO">IMO</option>
-                </select>
+                
+                <input type="text" class="form-control" id="location" placeholder="Location"/>
                 <span
                   className="spanValid field-validation-valid"
                   data-valmsg-for="module"
@@ -117,10 +97,11 @@ const BranchModal = (props) => {
                 ></span>
               </div>
             </div>
+
             <div className="row">
               <div className={"form-group col-md-6"}>
                 <label htmlFor="town" className="float-left text-dark">
-                  Employee Name <b className="text-danger">*</b>
+                  Location Type <b className="text-danger">*</b>
                 </label>
                 <select
                   className="form-control valid form-select"
@@ -155,174 +136,16 @@ const BranchModal = (props) => {
               </div>
 
               <div className={"form-group col-md-6"}>
-                <label htmlFor="module" className="float-left text-dark">
-                  Module yeah <b className="text-danger">*</b>
-                </label>
-                <select
-                  className="form-control valid form-select"
-                  required
-                  id="module"
-                  aria-invalid="false"
-                >
-                  <option value="">Please Select</option>
-                  <option value="ANAMBRA">ANAMBRA</option>
-                  <option value="BAUCHI">BAUCHI</option>
-                  <option value="BAYELSA">BAYELSA</option>
-                  <option value="BENUE">BENUE</option>
-                  <option value="BORNO">BORNO</option>
-                  <option value="CROSS RIVER">CROSS RIVER</option>
-                  <option value="DELTA">DELTA</option>
-                  <option value="EBONYI">EBONYI</option>
-                  <option value="EDO">EDO</option>
-                  <option value="EKITI">EKITI</option>
-                  <option value="ENUGU">ENUGU</option>
-                  <option value="GOMBE">GOMBE</option>
-                  <option value="IMO">IMO</option>
-                </select>
-                <span
-                  className="spanValid field-validation-valid"
-                  data-valmsg-for="module"
-                  data-valmsg-replace="true"
-                ></span>
-              </div>
-            </div>
-            <div className="row">
-              <div className={"form-group col-md-6"}>
                 <label htmlFor="town" className="float-left text-dark">
-                  Employee Name <b className="text-danger">*</b>
+                  Address <b className="text-danger">*</b>
                 </label>
-                <select
-                  className="form-control valid form-select"
-                  required
-                  id="town"
-                  aria-invalid="false"
-                >
-                  <option value="">Please Select</option>
-                  <option value="ABUJA FCT">ABUJA FCT</option>
-                  <option value="ABIA">ABIA</option>
-                  <option value="ADAMAWA">ADAMAWA</option>
-                  <option value="AKWA IBOM">AKWA IBOM</option>
-                  <option value="ANAMBRA">ANAMBRA</option>
-                  <option value="BAUCHI">BAUCHI</option>
-                  <option value="BAYELSA">BAYELSA</option>
-                  <option value="BENUE">BENUE</option>
-                  <option value="BORNO">BORNO</option>
-                  <option value="CROSS RIVER">CROSS RIVER</option>
-                  <option value="DELTA">DELTA</option>
-                  <option value="EBONYI">EBONYI</option>
-                  <option value="EDO">EDO</option>
-                  <option value="EKITI">EKITI</option>
-                  <option value="ENUGU">ENUGU</option>
-                  <option value="GOMBE">GOMBE</option>
-                  <option value="IMO">IMO</option>
-                </select>
-                <span
-                  className="spanValid field-validation-valid"
-                  data-valmsg-for="town"
-                  data-valmsg-replace="true"
-                ></span>
+                <textarea
+                  class="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
+                ></textarea>
               </div>
 
-              <div className={"form-group col-md-6"}>
-                <label htmlFor="module" className="float-left text-dark">
-                  Module yeah <b className="text-danger">*</b>
-                </label>
-                <select
-                  className="form-control valid form-select"
-                  required
-                  id="module"
-                  aria-invalid="false"
-                >
-                  <option value="">Please Select</option>
-                  <option value="ANAMBRA">ANAMBRA</option>
-                  <option value="BAUCHI">BAUCHI</option>
-                  <option value="BAYELSA">BAYELSA</option>
-                  <option value="BENUE">BENUE</option>
-                  <option value="BORNO">BORNO</option>
-                  <option value="CROSS RIVER">CROSS RIVER</option>
-                  <option value="DELTA">DELTA</option>
-                  <option value="EBONYI">EBONYI</option>
-                  <option value="EDO">EDO</option>
-                  <option value="EKITI">EKITI</option>
-                  <option value="ENUGU">ENUGU</option>
-                  <option value="GOMBE">GOMBE</option>
-                  <option value="IMO">IMO</option>
-                </select>
-                <span
-                  className="spanValid field-validation-valid"
-                  data-valmsg-for="module"
-                  data-valmsg-replace="true"
-                ></span>
-              </div>
-            </div>
-            <div className="row">
-              <div className={"form-group col-md-6"}>
-                <label htmlFor="town" className="float-left text-dark">
-                  Employee Name <b className="text-danger">*</b>
-                </label>
-                <select
-                  className="form-control valid form-select"
-                  required
-                  id="town"
-                  aria-invalid="false"
-                >
-                  <option value="">Please Select</option>
-                  <option value="ABUJA FCT">ABUJA FCT</option>
-                  <option value="ABIA">ABIA</option>
-                  <option value="ADAMAWA">ADAMAWA</option>
-                  <option value="AKWA IBOM">AKWA IBOM</option>
-                  <option value="ANAMBRA">ANAMBRA</option>
-                  <option value="BAUCHI">BAUCHI</option>
-                  <option value="BAYELSA">BAYELSA</option>
-                  <option value="BENUE">BENUE</option>
-                  <option value="BORNO">BORNO</option>
-                  <option value="CROSS RIVER">CROSS RIVER</option>
-                  <option value="DELTA">DELTA</option>
-                  <option value="EBONYI">EBONYI</option>
-                  <option value="EDO">EDO</option>
-                  <option value="EKITI">EKITI</option>
-                  <option value="ENUGU">ENUGU</option>
-                  <option value="GOMBE">GOMBE</option>
-                  <option value="IMO">IMO</option>
-                </select>
-                <span
-                  className="spanValid field-validation-valid"
-                  data-valmsg-for="town"
-                  data-valmsg-replace="true"
-                ></span>
-              </div>
-
-              <div className={"form-group col-md-6"}>
-                <label htmlFor="module" className="float-left text-dark">
-                  Module yeah <b className="text-danger">*</b>
-                </label>
-                <select
-                  className="form-control valid form-select"
-                  required
-                  id="module"
-                  aria-invalid="false"
-                >
-                  <option value="">Please Select</option>
-                  <option value="ANAMBRA">ANAMBRA</option>
-                  <option value="BAUCHI">BAUCHI</option>
-                  <option value="BAYELSA">BAYELSA</option>
-                  <option value="BENUE">BENUE</option>
-                  <option value="BORNO">BORNO</option>
-                  <option value="CROSS RIVER">CROSS RIVER</option>
-                  <option value="DELTA">DELTA</option>
-                  <option value="EBONYI">EBONYI</option>
-                  <option value="EDO">EDO</option>
-                  <option value="EKITI">EKITI</option>
-                  <option value="ENUGU">ENUGU</option>
-                  <option value="GOMBE">GOMBE</option>
-                  <option value="IMO">IMO</option>
-                </select>
-                <span
-                  className="spanValid field-validation-valid"
-                  data-valmsg-for="module"
-                  data-valmsg-replace="true"
-                ></span>
-              </div>
             </div>
 
             <div className={style.ModalBtnCont}>
