@@ -24,6 +24,39 @@ const CountByLocation = () => {
       parseOptions(Chart, chartOptions());
     }
 
+    const data = {
+      labels: ['Uyo', 'Karu', 'Eket', 'Abuja', 'Lagos', 'Calabar'],
+      datasets: [
+        {
+          label: 'Dataset 1',
+          data: [65, 59, 80, 81, 56, 20],
+          borderColor: 'rgba(255, 99, 132, 1)',
+          backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        },
+        // Add more datasets as needed
+      ],
+    };
+
+    const options = {
+      scales: {
+        y: {
+          beginAtZero: true,
+        },
+      },
+      plugins: {
+        zoom: {
+          pan: {
+            enabled: true,
+            mode: 'xy',
+          },
+          zoom: {
+            enabled: true,
+            mode: 'xy',
+          },
+        },
+      },
+    };
+
     return (
       <div className="">
       {/* Table */}
@@ -74,8 +107,8 @@ const CountByLocation = () => {
               <CardBody>
               <div className="chart">
                 <Line
-                  data={chartExample1Data[chartExample1]}
-                  options={chartExample1.options}
+                  data={data}
+                  options={options}
                 />
               </div>
               </CardBody>

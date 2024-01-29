@@ -7,8 +7,6 @@ import { Doughnut } from "react-chartjs-2";
 import {
   chartOptions,
   parseOptions,
-  chartExample1,
-  chartExample2,
 } from "variables/charts.js";
 
 
@@ -24,7 +22,6 @@ const CountByGender = () => {
   const [entity, setEntity] = useState("");
   const [department, setDepartment] = useState("");
 
-  const [chartExample1Data, setChartExample1Data] = useState("data1");
 
   if (window.Chart) {
     parseOptions(Chart, chartOptions());
@@ -33,7 +30,6 @@ const CountByGender = () => {
     labels: Data.map((data) => data.gender),
     datasets: [
       {
-        label: "Employees Gender",
         data: Data.map((data) => data.number),
         backgroundColor: [
           '#F7B2AD',
@@ -44,6 +40,29 @@ const CountByGender = () => {
       }
     ]
   });
+
+  const options = {
+    responsive: true,
+    legend: {
+      display: true,
+      position: 'right',
+      labels: {
+        color: 'black',
+        fontSize: 14,
+        fontStyle: 'italic',
+      },
+      title: {
+        text: 'Status by Location',
+        display: true,
+      },
+      box: {
+        backgroundColor: 'rgba(220, 220, 220, 0.8)',
+        borderColor: 'grey',
+        borderRadius: 5,
+      },
+    },
+    cutoutPercentage: 70, // Define hole size in the center
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -122,19 +141,7 @@ const CountByGender = () => {
                 <div className="chart">
                   <Doughnut
                     data={chartData}
-                    options={{
-                      plugins: {
-                        title: {
-                          display: true,
-                          text: "Employee's Gender"
-                        },
-                        legend: {
-                          display: true,
-                          position: 'bottom',
-                          
-                        }
-                      }
-                    }}
+                    options={options}
                   />
                 </div>
               </div>

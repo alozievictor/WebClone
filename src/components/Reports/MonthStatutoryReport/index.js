@@ -1,19 +1,9 @@
 import React, { useState } from "react";
 import style from "../../../assets/css/block.module.css";
 import UserHeader from "components/Headers/UserHeader";
-import Chart from "chart.js";
 import { Line } from "react-chartjs-2";
-
-import { Card } from "reactstrap";
-
-import { chartOptions, parseOptions } from "variables/charts.js";
+import { Card, CardBody } from "reactstrap";
 import { Link } from "react-router-dom";
-
-const Data = [
-  ["Type", "Number"],
-  ["FULL TIME", 2],
-  ["NULL", 1],
-];
 
 const MonthStatutoryReport = () => {
   const [entity, setEntity] = useState("");
@@ -24,9 +14,20 @@ const MonthStatutoryReport = () => {
     setSelectedDate(date);
   };
 
-  // if (window.Chart) {
-  //   parseOptions(Chart, chartOptions());
-  // }
+
+
+  const data = {
+    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+    datasets: [
+      {
+        label: 'Dataset 1',
+        data: [65, 59, 80, 81, 56, 20],
+        borderColor: 'rgba(255, 99, 132, 1)',
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+      },
+      // Add more datasets as needed
+    ],
+  };
 
   return (
     <div className={style.cont}>
@@ -118,13 +119,15 @@ const MonthStatutoryReport = () => {
                       </div>
                     </div>
                   </div>
+                  <CardBody>
                   <div
                     class={style.tableContainer}
                     style={{ overflowX: "auto" }}
                    
                   >
-                    <Line data={["400", "500"]} />
+                    <Line data={data} />
                   </div>
+                  </CardBody>
                 </div>
               </Card>
               <Card className="shadow my-2">

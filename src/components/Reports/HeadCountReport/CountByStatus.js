@@ -23,10 +23,9 @@ const CountByStatus = () => {
   }
 
   const [chartData, setChartData] = useState({
-    labels: ['Male', 'Female'],
+    labels: Data.map((data) => data.type),
     datasets: [
       {
-        label: "Employee's Gender",
         data: Data.map((data) => data.number),
         backgroundColor: [
           '#F7B2AD',
@@ -37,6 +36,29 @@ const CountByStatus = () => {
       }
     ]
   });
+
+  const options = {
+    responsive: true,
+    legend: {
+      display: true,
+      position: 'right',
+      labels: {
+        color: 'black',
+        fontSize: 14,
+        fontStyle: 'italic',
+      },
+      title: {
+        text: 'Status',
+        display: true,
+      },
+      box: {
+        backgroundColor: 'rgba(220, 220, 220, 0.8)',
+        borderColor: 'grey',
+        borderRadius: 5,
+      },
+    },
+    cutoutPercentage: 70, // Define hole size in the center
+  };
 
   return (
     <div className="">
@@ -106,19 +128,7 @@ const CountByStatus = () => {
                 <div className="chart">
                   <Doughnut
                     data={chartData}
-                    options={{
-                      plugins: {
-                        title: {
-                          display: true,
-                          text: "Employee's Gender"
-                        },
-                        label: {
-                          display: true,
-                          position: 'center',
-                          
-                        }
-                      }
-                    }}
+                    options={options}
                   />
                 </div>
               </div>
