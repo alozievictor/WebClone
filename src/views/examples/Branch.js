@@ -1,9 +1,5 @@
 import { useState } from "react";
-import {
-  Card,
-  Container,
-  Row,
-} from "reactstrap";
+import { Card, Container, Row } from "reactstrap";
 import style from "../../assets/css/block.module.css";
 import BranchModal from "components/subComponent/BranchModal";
 import Backdrop from "components/subComponent/Backdrop";
@@ -42,7 +38,11 @@ const Branch = () => {
                     </div>
                   </div>
                   <div class={style.buttonsContainer} data-v-17b4fe89="">
-                    <button onClick={HandleLocation} className={style.locationBtn} data-v-17b4fe89="">
+                    <button
+                      onClick={HandleLocation}
+                      className={style.locationBtn}
+                      data-v-17b4fe89=""
+                    >
                       {" "}
                       + Add Location{" "}
                     </button>
@@ -155,7 +155,6 @@ const Branch = () => {
                               </li>{" "}
                             </ul>
                           </div>
-                      
                         </td>
                       </tr>
                       <tr class="even">
@@ -393,11 +392,14 @@ const Branch = () => {
                 </div>
               </div>
               <div>
-            {isLocation && (
-              <BranchModal onCancel={closehandler} onConfirm={closehandler} />
-            )}
-            {isLocation && <Backdrop onClick={closehandler} />}
-          </div>
+                {isLocation && (
+                  <BranchModal
+                    onCancel={closehandler}
+                    onConfirm={closehandler}
+                  />
+                )}
+                {isLocation && <Backdrop onClick={closehandler} />}
+              </div>
             </Card>
           </div>
         </Row>

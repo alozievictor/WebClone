@@ -124,7 +124,7 @@ const Request = () => {
                 </div>
               </div>
 
-              <div className="mt-3 bg-white rounded">
+              <div className="mt-3">
                 {showTab.LoanType && <LoanType />}
                 {showTab.InterestType && <InterestType />}
                 {showTab.LoanSetting && <LoanSetting />}
